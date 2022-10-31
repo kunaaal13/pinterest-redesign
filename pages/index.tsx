@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
 import Header from '../components/Header'
+import Main from '../components/Main'
 
 const Home: NextPage = () => {
   const [query, setQuery] = useState<string>('')
@@ -14,6 +15,8 @@ const Home: NextPage = () => {
       </Head>
 
       <Header query={query} setQuery={setQuery} />
+
+      <Main query={query} />
     </div>
   )
 }
