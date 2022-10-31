@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div className='w-full min-h-screen bg-white text-black'>
       <Head>
-        <title>Pinterest Redesign</title>
+        <title>Pinterest Redesign : {query === '' ? 'Home' : query}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
