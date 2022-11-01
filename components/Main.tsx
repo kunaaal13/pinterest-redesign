@@ -84,6 +84,7 @@ function Main({ query }: Props) {
           client_id: process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY,
           query: query,
           per_page: 30,
+          page: page,
         },
       })
 

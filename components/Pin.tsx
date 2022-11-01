@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -9,13 +10,15 @@ function Pin({ pin }: Props) {
 
   return (
     <div>
-      <img
-        src={pin.urls.regular}
-        alt=''
-        className={`w-full mb-6 rounded-md ${
-          random % 2 == 0 ? 'aspect-video' : 'aspect-square'
-        } cursor-pointer`}
-      />
+      <Link href={pin.links.download}>
+        <img
+          src={pin.urls.regular}
+          alt=''
+          className={`w-full mb-6 rounded-md ${
+            random % 2 == 0 ? 'aspect-video' : 'aspect-square'
+          } cursor-pointer`}
+        />
+      </Link>
     </div>
   )
 }
